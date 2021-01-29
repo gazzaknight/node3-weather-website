@@ -1,4 +1,3 @@
-console.log('Client side js loaded')
 
 fetch('http://puzzle.mead.io/puzzle').then((response)=>{
     response.json().then((data)=>{
@@ -25,7 +24,6 @@ weatherForm.addEventListener('submit',(e)=>{
         response.json().then(({error, location, forecast})=>{
             if(error){
                return messageOne.textContent = error
-                
             }
             messageOne.textContent = location
             messageTwo.textContent = forecast
